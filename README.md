@@ -11,3 +11,9 @@ This data set is licensed under the Creative Commons Attribution 4.0 Internation
 
 Data URL: https://raw.githubusercontent.com/CSSEGISandData/COVID-19/web-data/data/cases_country.csv
 
+## Files
+
+- app.py
+  main web application file deployed using streamlit
+- main.ipynb
+  jupyter notebook file to show initial numerical and graphical summaries
