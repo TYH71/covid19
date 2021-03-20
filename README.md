@@ -13,7 +13,5 @@ Data URL: https://raw.githubusercontent.com/CSSEGISandData/COVID-19/web-data/dat
 
 ## Files
 
-- app.py
-  main web application file deployed using streamlit
-- main.ipynb
-  jupyter notebook file to show initial numerical and graphical summaries
+- app.py - main web application file deployed using streamlit
+- main.ipynb - jupyter notebook file to show initial numerical and graphical summaries
