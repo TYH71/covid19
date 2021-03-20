@@ -5,6 +5,7 @@ This web application aims to deliver interative dashboard with relevant visualis
 - Author : TYH71
 - Data : COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University
 - Source: https://github.com/CSSEGISandData/COVID-19/
+- Dependencies: streamlit, pandas, plotly
 
 Data URL: https://raw.githubusercontent.com/CSSEGISandData/COVID-19/web-data/data/cases_country.csv
 
