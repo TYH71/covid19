@@ -28,12 +28,30 @@ covid_df = covid_df.rename(columns={
     'Country_Region': 'Country',
     'Long_': 'Long'
 })
+covid_df = covid_df.drop(columns=['People_Tested', 'People_Hospitalized'])
+title = {
+    "Confirmed": 'Confirmed COVID-19 Cases', 
+    "Deaths": 'Death Count caused by COVID-19', 
+    "Recovered": 'Recovered Cases', 
+    "Active": 'Current Active COVID-19 Cases', 
+    "Incident_Rate": 'Incident Rate', 
+    "Mortality_Rate": 'Mortality Rate'
+}
+description = {
+    "Confirmed": 'Counts include confirmed and probable (where reported).', 
+    "Deaths": 'Counts include confirmed and probable (where reported).', 
+    "Recovered": 'Recovered cases are estimates based on local media reports, and state and local reporting when available, and therefore may be substantially lower than the true number.', 
+    "Active": 'Active cases = total cases - total recovered - total deaths.', 
+    "Incident_Rate": 'Incidence Rate = cases per 100,000 persons.', 
+    "Mortality_Rate": 'Case-Fatality Ratio (%) = Number recorded deaths / Number cases.'
+}
+
 
 # side bar
 st.sidebar.title('COVID-19 Dashboard')
 sidebar = st.sidebar.selectbox(
     "Feature Selection",
-    ("Confirmed", "Deaths", "Recovered", "Active")
+    ("Confirmed", "Deaths", "Recovered", "Active", "Incident_Rate", "Mortality_Rate")
 )
 st.sidebar.header('About')
 st.sidebar.info('''
@@ -80,11 +98,12 @@ with st.beta_container():
 st.write('---')
 
 
-# Bubble Map - Total COVID-19 Cases across the world 
+# Bubble Map - Total COVID-19 Cases across the world
 with st.beta_container():
-    st.write(f"### COVID-19 '{sidebar}' Cases")
+    st.write(f"### {title[sidebar]}")
     st.code(f'''
-    # Bubble Map to show the COVID-19 related cases around the world.
+    # Bubble Map to show the {title[sidebar]} around the world.
+    # Description: {description[sidebar]}
     # Multivariate : Latitude, Longitude, Country, {sidebar}
     ''')
     bubble_map = px.scatter_geo(covid_df[['Lat', 'Long', 'Country', sidebar]].dropna(),
@@ -92,12 +111,24 @@ with st.beta_container():
         lon='Long',
         hover_name='Country', 
         size=sidebar, 
-        projection='natural earth',
+        projection='robinson',
         color=sidebar,
         size_max=50,
         color_continuous_scale = ['deepskyblue','red']
     )
-    bubble_map.update_layout(paper_bgcolor='white')
+    bubble_map.update_geos(
+        resolution=110,
+        showcoastlines=True, coastlinecolor="RebeccaPurple",
+        showland=True, landcolor="LightGreen",
+        showocean=True, oceancolor="LightBlue",
+        showlakes=True, lakecolor="Blue",
+        showrivers=True, rivercolor="Blue"
+    )
+    bubble_map.update_layout(
+        height=350, 
+        margin={"r":15,"t":15,"l":15,"b":15}, 
+        paper_bgcolor='white'
+    )
     st.plotly_chart(bubble_map)
 
 st.write('---')
@@ -105,9 +136,10 @@ st.write('---')
 
 # Bar Chart - According to Confirmed Cases across the world
 with st.beta_container():
-    st.write(f"### Top 10 ranking by '{sidebar}' Cases")
+    st.write(f"### Top 10 ranking by '{sidebar}'")
     st.code(f'''
     # Bar Chart to show the rankings between countries according to '{sidebar}'
+    # Description: {description[sidebar]}
     # Bivariate : Country, {sidebar}
     ''')
     threshold = 10
@@ -117,6 +149,9 @@ with st.beta_container():
         color=sidebar,
         color_continuous_scale=px.colors.sequential.Viridis
     )
-    bar.update_layout(paper_bgcolor='white')
+    bar.update_layout(
+        height=400, 
+        margin={"r":15,"t":15,"l":15,"b":15},
+        paper_bgcolor='white'
+    )
     st.plotly_chart(bar)
-  
