@@ -2,6 +2,8 @@
 
 This web application, made using Streamlit, aims to deliver an interactive dashboard with relevant visualisations based on real-time COVID-19 Pandemic Data. COVID-19 was first identified in December 2019 in Wuhan, China. The World Health Organization declared the outbreak a Public Health Emergency of International Concern in January 2020 and a pandemic in March 2020.
 
+![image](https://user-images.githubusercontent.com/64251764/111880786-67b0f380-89e8-11eb-9b5d-1260b5daf211.png)
+
 - Author : TYH71
 - Data : COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University
 - Source: https://github.com/CSSEGISandData/COVID-19/
