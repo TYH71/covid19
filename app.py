@@ -98,7 +98,7 @@ with st.beta_container():
 st.write('---')
 
 
-# Bubble Map - Total COVID-19 Cases across the world
+# Bubble Map - Total {sidebar} Cases across the world
 with st.beta_container():
     st.write(f"### {title[sidebar]}")
     st.code(f'''
@@ -134,9 +134,9 @@ with st.beta_container():
 st.write('---')
 
 
-# Bar Chart - According to Confirmed Cases across the world
+# Bar Chart - According to {sidebar} across the world
 with st.beta_container():
-    st.write(f"### Top 10 ranking by '{sidebar}'")
+    st.write(f"### Top 10 Countries by '{sidebar}'")
     st.code(f'''
     # Bar Chart to show the rankings between countries according to '{sidebar}'
     # Description: {description[sidebar]}
