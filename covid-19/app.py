@@ -4,7 +4,7 @@
 ## User Guide
     Console:
     pip install streamlit
-    streamlit run dashboard.py
+    streamlit run app.py
 """
 
 
