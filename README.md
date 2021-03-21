@@ -24,13 +24,14 @@ Data URL: https://raw.githubusercontent.com/CSSEGISandData/COVID-19/web-data/dat
 ## Visualisations
 
 ### Scatter Map
-
+Display data points across the map.
+Map projection: Robinson
 ![image](https://user-images.githubusercontent.com/64251764/111898095-db8de300-8a5e-11eb-9877-e3f6588189f8.png)
 
 ### Time-Series Graph
-
+Features a slider and country selection.
 ![image](https://user-images.githubusercontent.com/64251764/111898105-eea0b300-8a5e-11eb-9e84-2f521de6be6f.png)
 
 ### Ranking Chart
-
+Top 10 countries in terms of ranking
 ![image](https://user-images.githubusercontent.com/64251764/111898119-fd876580-8a5e-11eb-8251-d2e503d75d6f.png)
