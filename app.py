@@ -21,6 +21,9 @@ st.markdown('''
     h1, h2, h3, h4, h5, h6, p {
         color:#130654;
     }
+    .stDataFrame {
+        background-color:#fffff5;
+    }
 </style>
 ''', unsafe_allow_html=True)
 
@@ -54,6 +57,11 @@ sidebar = st.sidebar.selectbox(
 st.sidebar.header('About')
 st.sidebar.info('''
 This web application is authored and maintained by TYH71, with aims to create visualisations for COVID-19 Data.
+''')
+st.sidebar.header('Contribute')
+st.sidebar.info('''
+GitHub Page can be found here.
+https://github.com/TYH71/covid19
 ''')
 
 # Header on Streamlit
