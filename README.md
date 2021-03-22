@@ -1,6 +1,6 @@
 # COVID-19 Dashboard
 
-This web application, made using Streamlit, aims to deliver an interactive dashboard with relevant visualisations based on real-time COVID-19 Pandemic Data. COVID-19 was first identified in December 2019 in Wuhan, China. The World Health Organization declared the outbreak a Public Health Emergency of International Concern in January 2020 and a pandemic in March 2020.
+This web application aims to deliver interative dashboard with relevant visualisations based on real time COVID-19 Pandemic Data. It was first identified in December 2019 in Wuhan, China. The World Health Organization declared the outbreak a Public Health Emergency of International Concern in January 2020 and a pandemic in March 2020. Data is sourced from Johns Hopkins University CSSE.
 
 ![image](https://user-images.githubusercontent.com/64251764/111898058-979ade00-8a5e-11eb-8510-ede37f461ef8.png)
 
