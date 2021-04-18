@@ -6,6 +6,20 @@
     streamlit run app.py
 """
 
+st.markdown('''
+<style>
+    body {
+        background-color:#f8f5f1;
+    }
+    h1, h2, h3, h4, h5, h6, p {
+        color:#130654;
+    }
+    .stDataFrame {
+        background-color:#fffff5;
+    }
+</style>
+''', unsafe_allow_html=True)
+
 # Import Libraries
 import pandas as pd
 import plotly.express as px
