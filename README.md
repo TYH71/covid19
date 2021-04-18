@@ -15,6 +15,16 @@ This data set is licensed under the Creative Commons Attribution 4.0 Internation
 
 Data URL: https://raw.githubusercontent.com/CSSEGISandData/COVID-19/web-data/data/cases_country.csv
 
+## Running the Web App
+
+Ensure streamlit is being installed in the environment before hand
+
+<code>pip install streamlit --upgrade</code>
+
+Run this command in the console
+
+<code>streamlit run app.py</code>
+
 ## Files
 
 - app.py - main web application file deployed using streamlit
