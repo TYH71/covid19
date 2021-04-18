@@ -6,6 +6,13 @@
     streamlit run app.py
 """
 
+# Import Libraries
+import pandas as pd
+import plotly.express as px
+import streamlit as st
+import requests as req
+from streamlit.proto.DataFrame_pb2 import DataFrame
+
 st.markdown('''
 <style>
     body {
@@ -19,13 +26,6 @@ st.markdown('''
     }
 </style>
 ''', unsafe_allow_html=True)
-
-# Import Libraries
-import pandas as pd
-import plotly.express as px
-import streamlit as st
-import requests as req
-from streamlit.proto.DataFrame_pb2 import DataFrame
 
 # Import Data
 covid_df = pd.read_csv('https://raw.githubusercontent.com/CSSEGISandData/COVID-19/web-data/data/cases_country.csv')
