@@ -102,30 +102,44 @@ with st.container():
     # Description: {description[sidebar]}
     # Multivariate : Latitude, Longitude, Country, {sidebar}
     ''')
-    bubble_map = px.scatter_geo(covid_df[['Lat', 'Long', 'Country', sidebar]].dropna(),
-        lat='Lat',
-        lon='Long',
-        hover_name='Country', 
-        size=sidebar, 
-        projection='robinson',
-        color=sidebar,
-        size_max=50,
-        color_continuous_scale = ['deepskyblue','red']
-    )
-    bubble_map.update_geos(
-        resolution=110,
-        showcoastlines=True, coastlinecolor="RebeccaPurple",
-        showland=True, landcolor="LightGreen",
-        showocean=True, oceancolor="LightBlue",
-        showlakes=True, lakecolor="Blue",
-        showrivers=True, rivercolor="Blue"
-    )
-    bubble_map.update_layout(
-        height=350, 
-        margin={"r":15,"t":15,"l":15,"b":15}, 
-        paper_bgcolor='white'
-    )
+    # bubble_map = px.scatter_geo(covid_df[['Lat', 'Long', 'Country', sidebar]].dropna(),
+    #     lat='Lat',
+    #     lon='Long',
+    #     hover_name='Country', 
+    #     size=sidebar, 
+    #     projection='robinson',
+    #     color=sidebar,
+    #     size_max=50,
+    #     color_continuous_scale = ['deepskyblue','red']
+    # )
+    # bubble_map.update_geos(
+    #     resolution=110,
+    #     showcoastlines=True, coastlinecolor="RebeccaPurple",
+    #     showland=True, landcolor="LightGreen",
+    #     showocean=True, oceancolor="LightBlue",
+    #     showlakes=True, lakecolor="Blue",
+    #     showrivers=True, rivercolor="Blue"
+    # )
+    # bubble_map.update_layout(
+    #     height=350, 
+    #     margin={"r":15,"t":15,"l":15,"b":15}, 
+    #     paper_bgcolor='white'
+    # )
+
+    ## Updated on 29th Sep
+    bubble_map = px.scatter_mapbox(covid_df[['Lat', 'Long', 'Country', sidebar]].dropna(),
+    lat='Lat',
+    lon='Long',
+    hover_name='Country',
+    color=sidebar,
+    mapbox_style="carto-positron",
+    size=sidebar,
+    size_max=50,
+    color_continuous_scale = ['deepskyblue','red'],
+    zoom=.5
+
     st.plotly_chart(bubble_map)
+)
 
 st.write('---')
 
