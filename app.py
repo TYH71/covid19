@@ -52,7 +52,7 @@ https://github.com/TYH71/covid19
 
 
 # Header on Streamlit
-with st.beta_container():
+with st.container():
 
     st.markdown('''
     # COVID-19 Dashboard
@@ -69,7 +69,7 @@ with st.beta_container():
         > - Source: https://github.com/CSSEGISandData/COVID-19/
         > - Time-series API: https://covid19api.com
     ''')
-    dependency = st.beta_expander('Dependencies')
+    dependency = st.expander('Dependencies')
     dependency.code('''
     import pandas as pd
     import plotly.express as px
@@ -81,7 +81,7 @@ st.write('---')
 
 
 # Displaying Data
-with st.beta_container():
+with st.container():
     st.markdown('''
     ### COVID-19 Data
     ''')
@@ -95,7 +95,7 @@ st.write('---')
 
 
 # Bubble Map - Total COVID-19 Cases across the world
-with st.beta_container():
+with st.container():
     st.write(f"### {title[sidebar]}")
     st.code(f'''
     # Bubble Map to show the {title[sidebar]} around the world.
@@ -131,7 +131,7 @@ st.write('---')
 
 
 # Time-Series Graph
-with st.beta_container():
+with st.container():
     st.write('### Time Series Graph')
     st.code(f'''
     # Time Series Graph presents the COVID-19 Data Points at each time intervals.
@@ -198,7 +198,7 @@ st.write('---')
 
 
 # Bar Chart - According to Confirmed Cases across the world
-with st.beta_container():
+with st.container():
     st.write(f"### Top 10 Countries by '{sidebar}'")
     st.code(f'''
     # Bar Chart to show the rankings between countries according to '{sidebar}'
