@@ -141,7 +141,6 @@ with st.container():
     )
 
     st.plotly_chart(bubble_map)
-)
 
 st.write('---')
 
