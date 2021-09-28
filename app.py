@@ -89,7 +89,7 @@ with st.container():
     covid_df = pd.read_csv(source)
     print(covid_df)
     ''')
-    st.dataframe(covid_df.style.highlight_max(axis=0))
+    st.dataframe(covid_df.style)
 
 st.write('---')
 
