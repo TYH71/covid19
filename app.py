@@ -5,6 +5,7 @@
     pip install streamlit
     streamlit run app.py
 """
+!pip install streamlit
 
 # Import Libraries
 import pandas as pd
