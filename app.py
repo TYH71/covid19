@@ -13,20 +13,6 @@ import streamlit as st
 import requests as req
 from streamlit.proto.DataFrame_pb2 import DataFrame
 
-st.markdown('''
-<style>
-    body {
-        background-color:#f8f5f1;
-    }
-    h1, h2, h3, h4, h5, h6, p {
-        color:#130654;
-    }
-    .stDataFrame {
-        background-color:#fffff5;
-    }
-</style>
-''', unsafe_allow_html=True)
-
 # Import Data
 covid_df = pd.read_csv('https://raw.githubusercontent.com/CSSEGISandData/COVID-19/web-data/data/cases_country.csv')
 covid_df = covid_df.rename(columns={
