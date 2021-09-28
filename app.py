@@ -137,7 +137,8 @@ with st.container():
     size_max=50,
     color_continuous_scale = ['deepskyblue','red'],
     zoom=.5
-
+    )
+    
     st.plotly_chart(bubble_map)
 )
 
