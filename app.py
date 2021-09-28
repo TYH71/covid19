@@ -38,7 +38,7 @@ description = {
 st.sidebar.title('COVID-19 Dashboard')
 sidebar = st.sidebar.selectbox(
     "Feature Selection",
-    ("Confirmed", "Active", "Deaths", "Recovered")
+    ("Confirmed", "Deaths")
 )
 st.sidebar.header('About')
 st.sidebar.info('''
