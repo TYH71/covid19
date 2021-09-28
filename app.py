@@ -127,18 +127,19 @@ with st.container():
     # )
 
     ## Updated on 29th Sep
-    bubble_map = px.scatter_mapbox(covid_df[['Lat', 'Long', 'Country', sidebar]].dropna(),
-    lat='Lat',
-    lon='Long',
-    hover_name='Country',
-    color=sidebar,
-    mapbox_style="carto-positron",
-    size=sidebar,
-    size_max=50,
-    color_continuous_scale = ['deepskyblue','red'],
-    zoom=.5
+    bubble_map = px.scatter_mapbox(
+        data_frame=covid_df[['Lat', 'Long', 'Country', sidebar]].dropna(),
+        lat='Lat',
+        lon='Long',
+        hover_name='Country',
+        color=sidebar,
+        mapbox_style="carto-positron",
+        size=sidebar,
+        size_max=50,
+        color_continuous_scale = ['deepskyblue','red'],
+        zoom=.5
     )
-    
+
     st.plotly_chart(bubble_map)
 )
 
