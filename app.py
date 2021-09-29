@@ -232,4 +232,10 @@ with st.container():
         margin={"r":15,"t":15,"l":15,"b":15},
         paper_bgcolor='white'
     )
+
+    fig.update_layout({
+        'plot_bgcolor': 'rgba(0, 0, 0, 0)',
+        'paper_bgcolor': 'rgba(0, 0, 0, 0)',
+    })
+
     st.plotly_chart(bar)
