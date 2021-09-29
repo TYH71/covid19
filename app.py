@@ -233,7 +233,7 @@ with st.container():
         paper_bgcolor='white'
     )
 
-    fig.update_layout({
+    bar.update_layout({
         'plot_bgcolor': 'rgba(0, 0, 0, 0)',
         'paper_bgcolor': 'rgba(0, 0, 0, 0)',
     })
