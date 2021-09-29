@@ -203,6 +203,12 @@ with st.container():
                 'xanchor': 'center'
             }
         )
+
+        time_series_chart.update_layout({
+            'plot_bgcolor': 'rgba(0, 0, 0, 0)',
+            'paper_bgcolor': 'rgba(0, 0, 0, 0)',
+        })
+
         st.plotly_chart(time_series_chart)
     except Exception as e:
         st.code('''
